@@ -145,7 +145,9 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 // ============================================
 
 function add_customizer($wp_customize) {
-  // Add a new section (Banner section)
+  // ============================================
+  // BANNER
+  // ============================================
   $wp_customize->add_section( 'ct_banner_section', array(
       'title' => 'Banner'
   ) );
@@ -169,11 +171,10 @@ function add_customizer($wp_customize) {
   // Change Banner Height
   $wp_customize->add_setting( 'op_banner_height', array(
       'type' => 'option',
-      'default' => '50px;', // the default value, you can change it.
+      'default' => '50', // the default value, you can change it.
       'transport' => 'refresh',
   ) );
 
-  // Color option control
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'op_banner_height', array(
       'label' => 'Banner Height',
       'section' => 'ct_banner_section',
@@ -182,23 +183,40 @@ function add_customizer($wp_customize) {
       'type' => 'number'
   ) ) );
 
-  // Banner image
+  // ============================================
+  // BANNER IMAGE
+  // ============================================
   $wp_customize->add_setting( 'op_banner_image_url', array(
-      'type' => 'option',
-      'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'esc_url_raw'
+    'type' => 'option',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_url_raw'
   ) );
 
   $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'op_banner_image_url', array(
-      'label' => 'Upload Image',
-      'section' => 'ct_banner_section',
-      'description' => 'Upload your banner image.',
-      'settings' => 'op_banner_image_url'
+    'label' => 'Upload Image',
+    'section' => 'ct_banner_section',
+    'description' => 'Upload your banner image.',
+    'settings' => 'op_banner_image_url'
   ) ) );
 
+  // Change Banner Image Height
+  $wp_customize->add_setting( 'banner_image_height', array(
+      'type' => 'option',
+      'default' => '50', // the default value, you can change it.
+      'transport' => 'refresh',
+  ) );
 
-  // Add a new section (Logo image section)
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'banner_image_height', array(
+      'label' => 'Height',
+      'section' => 'ct_banner_section',
+      'description' => 'Change image height.',
+      'settings' => 'banner_image_height',
+      'type' => 'number'
+  ) ) );
+
+  // ============================================
+  // LOGO IMAGE
+  // ============================================
   $wp_customize->add_section( 'ct_logo_section', array(
       'title' => 'Logo'
   ) );
@@ -216,9 +234,24 @@ function add_customizer($wp_customize) {
       'description' => 'Upload your logo image.',
       'settings' => 'op_logo_url'
   ) ) );
-      //End.
+  // ============================================
+  // END
+  // ============================================
 }
 add_action( 'customize_register', 'add_customizer' );
+
+function banner_image_height(){
+ if( get_option('banner_image_height')){
+    ?>
+    <style type="text/css">
+        #shop-banner, img{
+            height: <?php echo get_option('banner_image_height'); ?>px;
+        }
+    </style>
+    <?php
+  }
+}
+add_action('wp_head', 'banner_image_height');
 
 function banner_height(){
     if( get_option('op_banner_height') ){
@@ -233,18 +266,6 @@ function banner_height(){
 }
 add_action('wp_head', 'banner_height');
 
-function banner_image(){
-    if( get_option('op_banner_height') && get_option('op_banner_image_url')){
-        ?>
-            <style type="text/css">
-                #shop-banner, img{
-                  max-height: <?php echo get_option('op_banner_height'); ?>px;
-                }
-            </style>
-        <?php
-    }
-}
-add_action('wp_head', 'banner_image');
 
 function banner_background_color_style(){
     if( get_option('op_banner_bg_color') ){
