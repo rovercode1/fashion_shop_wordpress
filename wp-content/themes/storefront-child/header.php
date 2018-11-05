@@ -13,19 +13,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<?php wp_head(); ?>
 <?php if ( get_option('op_logo_url') ) : ?>
 	<link rel="shortcut icon" href="<?php echo esc_url( get_option('op_logo_url') ); ?>">
 <?php endif; ?>
-
-<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <div id="shop" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
   <section id='shop-banner'>
-		<ul>
-			<?php include 'includes/header/category.php' ?>
-		</ul>
+		<?php if ( get_option('op_banner_image_url') ) : ?>
+			<img src="<?php echo esc_url( get_option('op_banner_image_url') ); ?>">
+		<?php endif; ?>
   </section>
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
