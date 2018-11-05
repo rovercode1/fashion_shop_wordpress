@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA;;;;;;;;;;EAUE;ACVF,YACA;EACE,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM",
-"sources": ["assets/css/_base.scss","assets/css/_banner.scss"],
+"mappings": "AAAA;;;;;;;;;;EAUE;ACVF,YACA;EACE,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;;ACLrB,kDAAkD;EAChD,OAAO,EAAE,IAAI",
+"sources": ["assets/css/_base.scss","assets/css/_banner.scss","assets/css/_customizer.scss"],
 "names": [],
 "file": "style.css"
 }
