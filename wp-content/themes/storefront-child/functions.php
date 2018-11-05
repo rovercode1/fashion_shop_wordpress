@@ -215,6 +215,24 @@ function add_customizer($wp_customize) {
   ) ) );
 
   // ============================================
+  // IMAGE LINK
+  // ============================================
+
+  $wp_customize->add_setting( 'banner_image_link', array(
+    'type' => 'option',
+    'default' => 'https://www.google.com',
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'banner_image_link', array(
+    'type' => 'text',
+    'section' => 'ct_banner_section', // Add a default or your own section
+    'label' => __( 'Custom URL' ),
+    'settings' => 'banner_image_link',
+    'description' => __( 'Link Url' ),
+  ) ) );
+
+  // ============================================
   // LOGO IMAGE
   // ============================================
   $wp_customize->add_section( 'ct_logo_section', array(

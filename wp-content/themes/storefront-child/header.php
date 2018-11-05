@@ -17,15 +17,22 @@
 <?php if ( get_option('op_logo_url') ) : ?>
 	<link rel="shortcut icon" href="<?php echo esc_url( get_option('op_logo_url') ); ?>">
 <?php endif; ?>
+
 </head>
 <body <?php body_class(); ?>>
 <div id="shop" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
+<?php if ( get_option('banner_image_link') && get_option('op_banner_image_url')) : ?>
+	<a href="<?php echo esc_url( get_option('banner_image_link') ); ?>">
+<?php endif; ?>
   <section id='shop-banner'>
-		<?php if ( get_option('op_banner_image_url') ) : ?>
-			<img src="<?php echo esc_url( get_option('op_banner_image_url') ); ?>">
-		<?php endif; ?>
+			<?php if ( get_option('op_banner_image_url') ) : ?>
+				<img src="<?php echo esc_url( get_option('op_banner_image_url') ); ?>">
+			<?php endif; ?>
   </section>
+<?php if ( get_option('banner_image_link') && get_option('op_banner_image_url')) : ?>
+	</a>
+<?php endif; ?>
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
