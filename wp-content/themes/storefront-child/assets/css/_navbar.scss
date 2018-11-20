@@ -19,10 +19,10 @@ ul#menu-category-navbar {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-
   li{
     display: inline;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
+    font-family: 'Roboto', sans-serif;
     a{
       color: #fff;
       font-weight: 500;
@@ -31,6 +31,24 @@ ul#menu-category-navbar {
   }
 }
 
+
+#nav-contain{
+  display: flex;
+  flex-direction: column;
+}
+ul#site-header-cart {
+  transition: 0.5s;
+    width: 150px;
+    &:hover{
+      width: 400px;
+    }
+    li a span{
+      color: #fff;
+    }
+    .cart-contents {
+        padding: 0;
+    }
+}
 @media(max-width:991px){
   #menu-category-navbar{
     display: flex;

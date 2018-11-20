@@ -2,3 +2,11 @@
 
 2018-11-11T12:50:11+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-webhooks.php on line 14
 
+2018-11-11T13:38:05+00:00 CRITICAL syntax error, unexpected ':' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\front-page.php on line 3
+
+2018-11-11T13:38:15+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\front-page.php on line 3
+
+2018-11-11T13:38:56+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\front-page.php on line 3
+
+2018-11-11T13:39:10+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\front-page.php on line 3
+

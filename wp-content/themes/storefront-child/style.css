@@ -9,10 +9,65 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  store-front-child
 */
+header#masthead {
+  padding: 0px;
+  margin: 0px; }
+
 #shop-banner {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
+
+section#category-bar {
+  background: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  section#category-bar nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+ul#menu-category-navbar {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase; }
+  ul#menu-category-navbar li {
+    display: inline;
+    padding: 0px 10px 10px 10px;
+    font-family: 'Roboto', sans-serif; }
+    ul#menu-category-navbar li a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px; }
+
+#nav-contain {
+  display: flex;
+  flex-direction: column; }
+
+ul#site-header-cart {
+  transition: 0.5s;
+  width: 150px; }
+  ul#site-header-cart:hover {
+    width: 400px; }
+  ul#site-header-cart li a span {
+    color: #fff; }
+  ul#site-header-cart .cart-contents {
+    padding: 0; }
+
+@media (max-width: 991px) {
+  #menu-category-navbar {
+    display: flex;
+    flex-direction: column; }
+
+  section#category-bar nav {
+    width: 100%;
+    justify-content: flex-end; }
+
+  section#category-bar {
+    justify-content: flex-end; } }
 
 /*# sourceMappingURL=style.css.map */
