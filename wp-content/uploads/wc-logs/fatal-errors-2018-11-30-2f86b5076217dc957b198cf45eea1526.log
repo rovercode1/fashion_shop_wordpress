@@ -1,0 +1,6 @@
+2018-11-30T12:27:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-includes\widgets\class-wp-widget-archives.php on line 17
+
+2018-11-30T13:32:06+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-includes\widgets\class-wp-widget-categories.php on line 17
+
+2018-11-30T13:32:09+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront\inc\admin\class-storefront-admin.php on line 10
+

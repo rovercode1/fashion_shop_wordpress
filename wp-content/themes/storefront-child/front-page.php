@@ -1,3 +1,5 @@
 <?php include 'header.php'; ?>
-<h1>h</h1>
+<div id="dropdown-box">
+
+</div>
 <?php include 'footer.php'; ?>

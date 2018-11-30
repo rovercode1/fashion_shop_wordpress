@@ -20,8 +20,8 @@
 
 </head>
 <body <?php body_class(); ?>>
-<div id="shop" class="hfeed site">
-	<?php do_action( 'storefront_before_header' ); ?>
+<div id="shop">
+<?php do_action( 'storefront_before_header' ); ?>
 <?php if ( get_option('banner_image_link') && get_option('op_banner_image_url')) : ?>
 	<a href="<?php echo esc_url( get_option('banner_image_link') ); ?>">
 <?php endif; ?>
@@ -34,24 +34,29 @@
 	</a>
 <?php endif; ?>
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="<?php echo site_url(); ?>"> <img src=" <?php echo get_theme_file_uri('assets/img/logo.png')?> " alt=""> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+	<section id="category-bar">
+		<nav class="navbar navbar-expand-lg navbar-dark ">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div id="nav-contain">
 					<div class="nav-box">
-						<?php
-						wp_nav_menu(array(
-							'theme_location'=>'main_header',
-						));
-						?>
 						<?php storefront_header_cart() ?>
 					</div>
-        </div>
-      </div>
-    </nav>
+					<div>
+						<?php
+							wp_nav_menu(array(
+							'theme_location'=>'category_bar',
+							 'depth' => 10,
+						));
+						?>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</section>
+
 	</header>
 	<!-- #masthead -->
 	<?php 	do_action( 'storefront_before_content' ); ?>

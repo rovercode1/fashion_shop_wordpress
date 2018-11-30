@@ -74,6 +74,7 @@ function my_theme_wrapper_end() {
 register_nav_menus( array(
 	'main_header' => 'Main Header',
 	'main_footer' => 'Main Footer',
+  'category_bar' => 'Category Navbar',
 ) );
 
 
@@ -232,6 +233,7 @@ function add_customizer($wp_customize) {
     'description' => __( 'Link Url' ),
   ) ) );
 
+
   // ============================================
   // LOGO IMAGE
   // ============================================
@@ -252,9 +254,11 @@ function add_customizer($wp_customize) {
       'description' => 'Upload your logo image.',
       'settings' => 'op_logo_url'
   ) ) );
+
   // ============================================
   // END
   // ============================================
+
 }
 add_action( 'customize_register', 'add_customizer' );
 
@@ -297,4 +301,6 @@ function banner_background_color_style(){
     }
 }
 add_action('wp_head', 'banner_background_color_style');
+
+
 ?>
