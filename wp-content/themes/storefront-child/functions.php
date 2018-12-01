@@ -254,6 +254,43 @@ function add_customizer($wp_customize) {
       'description' => 'Upload your logo image.',
       'settings' => 'op_logo_url'
   ) ) );
+  // ============================================
+  // SHOWCASE IMAGE(S)
+  // ============================================
+  $wp_customize->add_section( 'showcase_section', array(
+      'title' => 'Showcase'
+  ) );
+
+  $wp_customize->add_setting( 'image_count', array(
+    'type' => 'option',
+    'default' => '3',
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'image_count', array(
+    'type' => 'number',
+    'section' => 'showcase_section', // Add a default or your own section
+    'label' => __( 'Number Of Images' ),
+    'description' => '(IMPORTANT) After changing the image count, make sure to press publish -> exit out of the customizer -> then come back to this page for it to update.',
+    'settings' => 'image_count',
+  ) ) );
+
+for($i = 0; $i < get_option('image_count');$i++){
+  $count = $i +1;
+  $wp_customize->add_setting( 'showcase_url'.$count, array(
+    'type' => 'option',
+    'default' => '',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_url_raw'
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'showcase_url'.$count, array(
+    'label' => 'Image '.$count,
+    'section' => 'showcase_section',
+    'description' => 'Image '.$count,
+    'settings' => 'showcase_url'.$count
+  ) ) );
+}
 
   // ============================================
   // END
@@ -266,7 +303,7 @@ function banner_image_height(){
  if( get_option('banner_image_height')){
     ?>
     <style type="text/css">
-        #shop-banner, img{
+        #shop-banner img{
             height: <?php echo get_option('banner_image_height'); ?>px;
         }
     </style>

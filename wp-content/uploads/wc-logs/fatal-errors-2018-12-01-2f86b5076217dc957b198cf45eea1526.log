@@ -1,0 +1,8 @@
+2018-12-01T11:41:12+00:00 CRITICAL syntax error, unexpected '$i' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\functions.php on line 292
+
+2018-12-01T11:51:02+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-includes\l10n.php on line 123
+
+2018-12-01T11:51:08+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-includes\pomo\translations.php on line 86
+
+2018-12-01T12:06:45+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\front-page.php on line 21
+
