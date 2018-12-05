@@ -1,6 +1,8 @@
 
 
 section#category-bar{
+  display: flex;
+  flex-direction: column;
   background: #2c2c2c;
   display: flex;
   justify-content: center;
@@ -50,6 +52,7 @@ ul#site-header-cart {
 }
 
 li.menu-item-has-children {
+  z-index: 1;
     position: relative;
     top: 0px;
     &:hover{

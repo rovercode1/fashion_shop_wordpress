@@ -15,3 +15,26 @@ header#masthead {
     margin: 0px;
     border: 0px;
 }
+
+.my-container{
+  width: 60%;
+  overflow: hidden;
+  margin: auto;
+}
+
+@media(max-width:1642px){
+  .my-container{
+    width: 70%;
+  }
+}
+
+@media(max-width:1242px){
+  .my-container{
+    width: 100%;
+  }
+}
+@media(max-width:992px){
+  .my-container{
+    width: 100%;
+  }
+}
