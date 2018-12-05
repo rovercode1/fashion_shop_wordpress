@@ -33,7 +33,7 @@
 <?php if ( get_option('banner_image_link') && get_option('op_banner_image_url')) : ?>
 	</a>
 <?php endif; ?>
-<section class='container'>
+<section class='my-container'>
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 	<section id="category-bar">
 		<nav class="navbar navbar-expand-lg navbar-dark ">
@@ -56,6 +56,7 @@
 				</div>
 			</div>
 		</nav>
+<?php include 'wp-content\themes\storefront-child\includes\header\showcase.inc.php' ?>
 	</section>
 </section>
 	</header>

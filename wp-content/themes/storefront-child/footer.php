@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 <?php do_action( 'storefront_before_footer' ); ?>
-  <section class='container'>
+  <section class='my-container'>
     <footer id="colophon" class="site-footer" role="contentinfo">
     <?php
       wp_nav_menu(array(
