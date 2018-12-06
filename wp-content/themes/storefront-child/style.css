@@ -9,6 +9,9 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  store-front-child
 */
+.storefront-handheld-footer-bar ul li.home > a::before {
+  content: "\f015"; }
+
 header#masthead {
   padding: 0px;
   margin: 0px;
@@ -37,7 +40,7 @@ header#masthead {
 section#category-bar {
   display: flex;
   flex-direction: column;
-  background: #2c2c2c;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -69,7 +72,7 @@ ul#site-header-cart {
   transition: 0.5s;
   width: 150px; }
   ul#site-header-cart:hover {
-    width: 400px; }
+    width: 300px; }
   ul#site-header-cart li a span {
     color: #fff; }
   ul#site-header-cart .cart-contents {
@@ -99,6 +102,11 @@ li.menu-item-has-children:hover ul {
   border-radius: 3px;
   padding: 7px 10px;
   left: -7px; }
+
+.nav-box {
+  position: absolute;
+  top: 0px;
+  right: 0px; }
 
 @media (max-width: 992px) {
   #menu-category-navbar {

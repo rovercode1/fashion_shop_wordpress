@@ -10,6 +10,10 @@
  Text Domain:  store-front-child
 */
 
+.storefront-handheld-footer-bar ul li.home > a::before {
+    content: "\f015";
+}
+
 header#masthead {
     padding: 0px;
     margin: 0px;
