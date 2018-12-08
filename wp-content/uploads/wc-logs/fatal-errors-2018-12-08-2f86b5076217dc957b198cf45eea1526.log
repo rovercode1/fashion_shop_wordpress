@@ -1,0 +1,12 @@
+2018-12-08T19:13:06+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-admin\includes\template.php on line 12
+
+2018-12-08T19:15:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\fashion-shop-wordpress\wp-admin\includes\class-wp-filesystem-direct.php on line 76
+
+2018-12-08T19:55:19+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\header.php on line 51
+
+2018-12-08T19:55:38+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\header.php on line 51
+
+2018-12-08T19:57:26+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\header.php on line 54
+
+2018-12-08T20:04:41+00:00 CRITICAL syntax error, unexpected '<' in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\header.php on line 54
+
