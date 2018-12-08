@@ -36,11 +36,13 @@ header#masthead {
   display: flex;
   justify-content: center;
   align-items: center; }
+  #shop-banner img {
+    max-width: 100%; }
 
 section#category-bar {
   display: flex;
   flex-direction: column;
-  background: #000000;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -60,7 +62,7 @@ ul#menu-category-navbar {
     padding: 10px;
     font-family: 'Roboto', sans-serif; }
     ul#menu-category-navbar li a {
-      color: #fff;
+      color: #000;
       font-weight: 500;
       font-size: 14px; }
 
@@ -74,7 +76,7 @@ ul#site-header-cart {
   ul#site-header-cart:hover {
     width: 300px; }
   ul#site-header-cart li a span {
-    color: #fff; }
+    color: #000; }
   ul#site-header-cart .cart-contents {
     padding: 0; }
 
@@ -97,16 +99,11 @@ li.menu-item-has-children ul {
 li.menu-item-has-children:hover ul {
   display: block;
   position: absolute;
-  background: #2c2c2c;
+  background: #eeeeee;
   top: 30px;
   border-radius: 3px;
   padding: 7px 10px;
   left: -7px; }
-
-.nav-box {
-  position: absolute;
-  top: 0px;
-  right: 0px; }
 
 @media (max-width: 992px) {
   #menu-category-navbar {

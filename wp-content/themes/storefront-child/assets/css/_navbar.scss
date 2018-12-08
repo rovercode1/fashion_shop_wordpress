@@ -3,7 +3,7 @@
 section#category-bar{
   display: flex;
   flex-direction: column;
-  background: #000000;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ ul#menu-category-navbar {
     padding:10px;
     font-family: 'Roboto', sans-serif;
     a{
-      color: #fff;
+      color: #000;
       font-weight: 500;
       font-size: 14px;
     }
@@ -44,7 +44,7 @@ ul#site-header-cart {
       width: 300px;
     }
     li a span{
-      color: #fff;
+      color: #000;
     }
     .cart-contents {
         padding: 0;
@@ -75,18 +75,13 @@ li.menu-item-has-children ul{
 li.menu-item-has-children:hover ul {
     display: block;
     position: absolute;
-    background: #2c2c2c;
+    background: #eeeeee;
     top: 30px;
     border-radius: 3px;
     padding: 7px 10px;
     left: -7px;
 }
 
-.nav-box {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
 @media(max-width:992px){
   #menu-category-navbar{
     display: flex;
@@ -122,6 +117,7 @@ li.menu-item-has-children:hover ul {
     left: -7px;
     border-bottom: 1px solid #959595;
   }
+
 
 
 }
