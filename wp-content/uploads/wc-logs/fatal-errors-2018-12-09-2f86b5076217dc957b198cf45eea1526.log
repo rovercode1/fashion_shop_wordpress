@@ -1,0 +1,2 @@
+2018-12-09T18:05:11+00:00 CRITICAL Cannot redeclare banner_mid_image() (previously declared in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\functions.php:454) in C:\xampp\htdocs\fashion-shop-wordpress\wp-content\themes\storefront-child\functions.php on line 494
+

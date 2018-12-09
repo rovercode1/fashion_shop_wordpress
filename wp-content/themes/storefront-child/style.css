@@ -31,12 +31,28 @@ header#masthead {
 @media (max-width: 992px) {
   .my-container {
     width: 100%; } }
-#shop-banner {
+#shop-banner-1 {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
-  #shop-banner img {
+  #shop-banner-1 img {
+    max-width: 100%; }
+
+#shop-banner-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #shop-banner-2 img {
+    max-width: 100%; }
+
+#shop-banner-3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #shop-banner-3 img {
     max-width: 100%; }
 
 section#category-bar {
@@ -51,17 +67,17 @@ section#category-bar {
     justify-content: center;
     align-items: center; }
 
-ul#menu-category-navbar {
+#menu-category-navbar {
   margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase; }
-  ul#menu-category-navbar li {
+  #menu-category-navbar li {
     display: inline;
     padding: 10px;
     font-family: 'Roboto', sans-serif; }
-    ul#menu-category-navbar li a {
+    #menu-category-navbar li a {
       color: #000;
       font-weight: 500;
       font-size: 14px; }
@@ -74,7 +90,7 @@ ul#site-header-cart {
   transition: 0.5s;
   width: 150px; }
   ul#site-header-cart:hover {
-    width: 300px; }
+    width: 220px; }
   ul#site-header-cart li a span {
     color: #000; }
   ul#site-header-cart .cart-contents {
@@ -105,11 +121,7 @@ li.menu-item-has-children:hover ul {
   padding: 7px 10px;
   left: -7px; }
 
-@media (max-width: 992px) {
-  #menu-category-navbar {
-    display: flex;
-    flex-direction: column; }
-
+@media (max-width: 991px) {
   section#category-bar nav {
     width: 100%;
     justify-content: flex-end; }
@@ -136,6 +148,14 @@ li.menu-item-has-children:hover ul {
     top: 0px;
     padding: 7px 10px;
     left: -7px;
-    border-bottom: 1px solid #959595; } }
+    border-bottom: 1px solid #959595; }
+
+  .nav-box {
+    display: flex;
+    justify-content: center; }
+
+  #menu-category-navbar {
+    display: flex;
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

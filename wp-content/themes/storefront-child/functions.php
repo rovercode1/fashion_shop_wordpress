@@ -153,39 +153,23 @@ function add_customizer($wp_customize) {
       'title' => 'Banner'
   ) );
 
-  // Add a new option to Banner Section
-  $wp_customize->add_setting( 'op_banner_bg_color', array(
-      'type' => 'option',
-      'default' => '#ffffff', // the default value, you can change it.
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ) );
-
-  // Color option control
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'op_banner_bg_color', array(
-      'label' => 'Background Color',
-      'section' => 'ct_banner_section',
-      'description' => 'Change banner background color.',
-      'settings' => 'op_banner_bg_color'
-  ) ) );
-
   // Change Banner Height
-  $wp_customize->add_setting( 'op_banner_height', array(
-      'type' => 'option',
-      'default' => '50', // the default value, you can change it.
-      'transport' => 'refresh',
-  ) );
-
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'op_banner_height', array(
-      'label' => 'Banner Height',
-      'section' => 'ct_banner_section',
-      'description' => 'Change banner height.',
-      'settings' => 'op_banner_height',
-      'type' => 'number'
-  ) ) );
+  // $wp_customize->add_setting( 'op_banner_height', array(
+  //     'type' => 'option',
+  //     'default' => '50', // the default value, you can change it.
+  //     'transport' => 'refresh',
+  // ) );
+  //
+  // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'op_banner_height', array(
+  //     'label' => 'Banner Height',
+  //     'section' => 'ct_banner_section',
+  //     'description' => 'Change banner height.',
+  //     'settings' => 'op_banner_height',
+  //     'type' => 'number'
+  // ) ) );
 
   // ============================================
-  // BANNER IMAGE
+  // BANNER FULL IMAGE
   // ============================================
   $wp_customize->add_setting( 'op_banner_image_url', array(
     'type' => 'option',
@@ -194,26 +178,103 @@ function add_customizer($wp_customize) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'op_banner_image_url', array(
-    'label' => 'Upload Image',
+    'label' => 'Upload Full Image',
     'section' => 'ct_banner_section',
-    'description' => 'Upload your banner image.',
+    'description' => 'Upload your full banner image.',
     'settings' => 'op_banner_image_url'
   ) ) );
 
-  // Change Banner Image Height
-  $wp_customize->add_setting( 'banner_image_height', array(
+  $wp_customize->add_setting( 'op_banner_bg_color', array(
       'type' => 'option',
-      'default' => '50', // the default value, you can change it.
+      'default' => '#ffffff', // the default value, you can change it.
       'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
   ) );
 
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'banner_image_height', array(
-      'label' => 'Height',
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'op_banner_bg_color', array(
+      'label' => 'Full Banner Background Color',
       'section' => 'ct_banner_section',
-      'description' => 'Change image height.',
-      'settings' => 'banner_image_height',
-      'type' => 'number'
+      'description' => 'Change banner background color.',
+      'settings' => 'op_banner_bg_color'
   ) ) );
+  // ============================================
+  // BANNER MID IMAGE
+  // ============================================
+
+  $wp_customize->add_setting( 'op_banner_mid_image_url', array(
+    'type' => 'option',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_url_raw'
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'op_banner_mid_image_url', array(
+    'label' => 'Upload Mid Image',
+    'section' => 'ct_banner_section',
+    'description' => 'Upload your mid banner image.',
+    'settings' => 'op_banner_mid_image_url'
+  ) ) );
+
+  // Add a new option to Banner Section
+  $wp_customize->add_setting( 'op_banner_mid_bg_color', array(
+      'type' => 'option',
+      'default' => '#ffffff', // the default value, you can change it.
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ) );
+
+  // Color option control
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'op_banner_mid_bg_color', array(
+      'label' => 'Mid Banner Background Color',
+      'section' => 'ct_banner_section',
+      'description' => 'Change banner background color.',
+      'settings' => 'op_banner_mid_bg_color'
+  ) ) );
+
+  // ============================================
+  // BANNER SMALL  IMAGE
+  // ============================================
+  $wp_customize->add_setting( 'op_banner_small_image_url', array(
+    'type' => 'option',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_url_raw'
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'op_banner_small_image_url', array(
+    'label' => 'Upload Small Image',
+    'section' => 'ct_banner_section',
+    'description' => 'Upload your small banner image.',
+    'settings' => 'op_banner_small_image_url'
+  ) ) );
+
+  $wp_customize->add_setting( 'op_banner_small_bg_color', array(
+      'type' => 'option',
+      'default' => '#ffffff', // the default value, you can change it.
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ) );
+
+  // Color option control
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'op_banner_small_bg_color', array(
+      'label' => 'Small Banner Background Color',
+      'section' => 'ct_banner_section',
+      'description' => 'Change banner background color.',
+      'settings' => 'op_banner_small_bg_color'
+  ) ) );
+
+  // Change Banner Image Height
+  // $wp_customize->add_setting( 'banner_image_height', array(
+  //     'type' => 'option',
+  //     'default' => '50', // the default value, you can change it.
+  //     'transport' => 'refresh',
+  // ) );
+
+  // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'banner_image_height', array(
+  //     'label' => 'Height',
+  //     'section' => 'ct_banner_section',
+  //     'description' => 'Change image height.',
+  //     'settings' => 'banner_image_height',
+  //     'type' => 'number'
+  // ) ) );
 
   // ============================================
   // IMAGE LINK
@@ -310,7 +371,7 @@ function banner_image_height(){
     <?php
   }
 }
-add_action('wp_head', 'banner_image_height');
+// add_action('wp_head', 'banner_image_height');
 
 function banner_height(){
     if( get_option('op_banner_height') ){
@@ -323,21 +384,114 @@ function banner_height(){
         <?php
     }
 }
-add_action('wp_head', 'banner_height');
+// add_action('wp_head', 'banner_height');
 
 
 function banner_background_color_style(){
-    if( get_option('op_banner_bg_color') ){
+  if( get_option('op_banner_bg_color') ){
+    ?>
+    <style type="text/css">
+    #shop-banner-1{
+      background-color: <?php echo get_option('op_banner_bg_color'); ?>;
+    }
+    </style>
+    <?php
+  }
+}
+add_action('wp_head', 'banner_background_color_style');
+
+function banner_mid_background_color_style(){
+    if( get_option('op_banner_mid_bg_color') ){
         ?>
             <style type="text/css">
-                #shop-banner{
-                    background-color: <?php echo get_option('op_banner_bg_color'); ?>;
+                #shop-banner-2{
+                    background-color: <?php echo get_option('op_banner_mid_bg_color'); ?>;
                 }
             </style>
         <?php
     }
 }
-add_action('wp_head', 'banner_background_color_style');
+add_action('wp_head', 'banner_mid_background_color_style');
+
+function banner_small_background_color_style(){
+    if( get_option('op_banner_small_bg_color') ){
+        ?>
+            <style type="text/css">
+                #shop-banner-3{
+                    background-color: <?php echo get_option('op_banner_small_bg_color'); ?>;
+                }
+            </style>
+        <?php
+    }
+}
+add_action('wp_head', 'banner_small_background_color_style');
+
+
+
+function banner_full_image(){
+    if( get_option('op_banner_image_url') ){
+        ?>
+            <style type="text/css">
+
+                #shop-banner-1{
+                    display:flex;
+                }
+                #shop-banner-2{
+                    display:none;
+                }
+
+                #shop-banner-3{
+                  display:none;
+                }
+            </style>
+        <?php
+    }
+}
+add_action('wp_head', 'banner_full_image');
+
+function banner_mid_image(){
+    if( get_option('op_banner_mid_image_url') ){
+        ?>
+            <style type="text/css">
+            @media(max-width:992px){
+              #shop-banner-1{
+                display:none;
+              }
+              #shop-banner-2{
+                display:flex;
+              }
+              #shop-banner-3{
+                display:none;
+              }
+
+            }
+            </style>
+        <?php
+    }
+}
+add_action('wp_head', 'banner_mid_image');
+
+function banner_small_image(){
+    if( get_option('op_banner_small_image_url') ){
+        ?>
+            <style type="text/css">
+            @media(max-width:600px){
+              #shop-banner-1{
+                display:none;
+              }
+              #shop-banner-2{
+                display:none;
+              }
+              #shop-banner-3{
+                display:flex;
+              }
+
+            }
+            </style>
+        <?php
+    }
+}
+add_action('wp_head', 'banner_small_image');
 
 
 ?>
